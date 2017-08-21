@@ -4,9 +4,12 @@
   "description": "learn to build products with javascript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node server/src/index.js",
+    "eslint": "eslint src/",
+    "test": "eslint src/ && babel-node test/" 
   },
   "author": "Christopher A. Lewis",
+ 
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -19,6 +22,12 @@
     "eslint-plugin-react": "^7.2.1",
     "supertest": "^3.0.0",
     "tape": "^4.8.0"
+  }, 
+  "babel": {
+    "presets" : [
+      "es2015-node",
+      "stage-0"
+      ]
   },
   "dependencies": {
     "body-parser": "^1.17.2",
