@@ -1,21 +1,5 @@
-// require('babel-core/register')({
-// 	// "presets": ["es2015-node"]
-// 	// ignore false;
-// }); // hook for babel
 
-// const express = require('express')
-import express from 'express';
-const app = express();
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-});
-
-// catch all unhandled errors
-app.use((err, req, res) => {
-	console.error(err.stack);
-	res.status(500).send(err);
-});
+import app from './app';
 
 app.listen(8080, function() {
 	const host = this.address().address;
