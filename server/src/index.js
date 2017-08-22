@@ -1,11 +1,11 @@
 
 import app from './app';
-import logger from '.util/logger.js';
+import {logger} from './util/logger.js';
 
 app.listen(8080, function() {
 	const host = this.address().address;
 	const port = this.address().port;
-	console.log(`Experts server listening at http://${host}:${port}`);
+	logger.info(`Experts server listening at http://${host}:${port}`);
 });
 
 // output all uncaught exceptions
