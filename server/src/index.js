@@ -8,5 +8,5 @@ app.listen(8080, function() {
 });
 
 // output all uncaught exceptions
-process.on('uncaughtException', err => console.exception('uncaught exception:', err));
+process.on('uncaughtException', err => console.error('uncaught exception:', err));
 process.on('unhandledRejection', error => console.error('unhandled rejection:', err)); 
